@@ -31,6 +31,10 @@
      let level = parseInt($("#level").val()); let TestDataClass = ncmb.DataStore(db); TestDataClass .equalTo("level", level) .fetchAll() .then(function(results) { showResults(results); })
     }
 
+    function searchLevelLT() {
+     let level = parseInt($("#level").val()); let TestDataClass = ncmb.DataStore(db); TestDataClass .lessThan("level", level) .fetchAll() .then(function(results) { showResults(results); })
+    }
+
     function showResults(results) {
       // テーブルのヘッダを生成
       let msg = "<table><tr><th>name</th><th>Lvl</th><th>attack</th><th>defence</th></tr>";
