@@ -27,6 +27,10 @@
      let name = $("#name").val(); let TestDataClass = ncmb.DataStore(db); TestDataClass .equalTo("name", name) .fetchAll() .then(function(results) { showResults(results); })
     }
 
+    function searcheatingHabits() {
+     let eatingHabits = $("#eatingHabits").val(); let TestDataClass = ncmb.DataStore(db); TestDataClass .equalTo("eatingHabits", eatingHabits) .fetchAll() .then(function(results) { showResults(results); })
+    }
+
     function searchLevel() {
      let level = parseInt($("#level").val()); let TestDataClass = ncmb.DataStore(db); TestDataClass .equalTo("level", level) .fetchAll() .then(function(results) { showResults(results); })
     }
@@ -68,6 +72,10 @@
   <div>
     <label for="level">weight:</label>
     <input id="level" type="number" placeholder="monster level">
+  </div>
+  <div>
+    <label for="eatingHabits">eth:</label>
+    <input id="eatingHabits" type="text" placeholder="monster eatingHabits">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
